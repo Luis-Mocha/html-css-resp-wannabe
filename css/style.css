@@ -127,3 +127,47 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
+
+ /*
+ Bonus: anche nel range tra 768px e 1160px modifico il container per impedire la rottura del layout.
+ Oltre i  1160px il container manterrà sempre la larghezza desiderata di 1140px.
+ */
+ @media screen and (max-width: 1160px) {
+    .container {
+        width: 70%;
+    }
+ }
+
+
+/* TABLET */
+ @media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+ }
+
+ /* MOBILE */
+ /*
+ Rendo possibile il wrap affinche gli elementi si posizionino a colonna.
+ Rendo gli elementi all'interno larghi al 100% e li do margin-bottom che non avevano perchè prima si posizionavano affianco.
+ */
+ @media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+    /* Sezione Lessons */
+    .lessons .row {
+        flex-wrap: wrap;
+    }
+    .lessons .col {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    /* Sezione Steps */
+    .steps .row {
+        flex-wrap: wrap;
+    }
+    .steps .col {
+        width: 100%;
+    }
+ }
